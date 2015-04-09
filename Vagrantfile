@@ -6,4 +6,8 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
 
+  # Just going to roll shell.
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+  SHELL
 end
