@@ -15,7 +15,7 @@ The collective mind will guide Hayt.
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 ### Goals
-- [ ] Support Hubot execution.
+- [x] Support Hubot execution.
 - [ ] Support mocha test execution.
 
 ### Workflow
@@ -26,7 +26,7 @@ The collective mind will guide Hayt.
 This will clone the `arrakis-hubot` repo locally, make your changes here with your favorite editor.
 When you're ready to test:
 ```
-> vagarnt ssh
+> vagrant ssh
 $ cd arrakis/arrakis-hubot
 $ bin/hubot
 ```
