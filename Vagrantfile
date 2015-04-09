@@ -1,6 +1,20 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+#clone repos localy
+current_dir = File.dirname(__FILE__)
+
+repos = {
+  'arrakis-hubot' => 'git@github.com:desert-planet/arrakis-hubot.git'
+}
+
+repos.each_pair do |dir, repo|
+  unless File.exists?("#{current_dir}/#{dir}")
+    puts "Cloning #{repo} into #{current_dir}/#{dir}"
+    system("git clone #{repo} #{current_dir}/#{dir}")
+  end
+end
+
 Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
@@ -14,8 +28,12 @@ Vagrant.configure(2) do |config|
 
   # So far vagrant-hubot/ is mapped to /vagrant. That's fine.
   # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "./", "/home/vagrant/arrakis"
 
   # We're running this thing headless. No need for a gui currently.
+  config.vm.provider :virtualbox do |vb|
+    vb.gui = false
+  end
 
   # I could definitely consider doing this in the future.
   # config.push.define "atlas" do |push|
@@ -24,7 +42,7 @@ Vagrant.configure(2) do |config|
 
   # Just going to roll shell.
   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update
-    sudo apt-get install -y git build-essential nodejs
+    sudo apt-get update -qq
+    sudo apt-get install -y git build-essential nodejs nodejs-legacy npm coffeescript redis-server libgd2-xpm-dev libicu-dev 
   SHELL
 end
