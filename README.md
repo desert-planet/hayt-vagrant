@@ -20,12 +20,13 @@ The collective mind will guide Hayt.
 
 ### Workflow
 ```
-> git clone git@github.com:desert-planet/vagrant-hubot.git
-> vagrant up
+> git clone https://github.com/desert-planet/vagrant-hubot.git
+> vagrant status
 ```
 This will clone the `arrakis-hubot` repo locally, make your changes here with your favorite editor.
 When you're ready to test:
 ```
+> vagrant up
 > vagrant ssh
 $ cd arrakis/arrakis-hubot
 $ bin/hubot

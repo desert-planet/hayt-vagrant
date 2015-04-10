@@ -5,7 +5,7 @@
 current_dir = File.dirname(__FILE__)
 
 repos = {
-  'arrakis-hubot' => 'git@github.com:desert-planet/arrakis-hubot.git'
+  'arrakis-hubot' => 'https://github.com/desert-planet/vagrant-hubot.git'
 }
 
 repos.each_pair do |dir, repo|
@@ -43,6 +43,6 @@ Vagrant.configure(2) do |config|
   # Just going to roll shell.
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update -qq
-    sudo apt-get install -y git build-essential nodejs nodejs-legacy npm coffeescript redis-server libgd2-xpm-dev libicu-dev 
+    sudo apt-get install -y git build-essential nodejs nodejs-legacy npm coffeescript redis-server libgd2-xpm-dev libicu-dev
   SHELL
 end
