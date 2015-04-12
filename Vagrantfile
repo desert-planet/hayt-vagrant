@@ -5,7 +5,7 @@
 current_dir = File.dirname(__FILE__)
 
 repos = {
-  'arrakis-hubot' => 'https://github.com/desert-planet/vagrant-hubot.git'
+  'arrakis-hubot' => 'https://github.com/desert-planet/arrakis-hubot.git'
 }
 
 repos.each_pair do |dir, repo|
