@@ -21,6 +21,8 @@ The collective mind will guide Hayt.
 ### Workflow
 ```
 > git clone https://github.com/desert-planet/vagrant-hubot.git
+# If on windows you should set autocrlf to false.
+> git config --global core.autocrlf false
 > vagrant status
 ```
 This will clone the `arrakis-hubot` repo locally, make your changes here with your favorite editor.
