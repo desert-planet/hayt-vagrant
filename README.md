@@ -16,7 +16,7 @@ The collective mind will guide Hayt.
 
 ### Goals
 - [x] Support Hubot execution.
-- [ ] Support mocha test execution.
+- [x] Support mocha test execution.
 
 ### Workflow
 ```
@@ -34,3 +34,11 @@ $ cd arrakis/arrakis-hubot
 $ bin/hubot
 ```
 Test your feature.
+
+If you have written tests and placed them in tests/.
+```
+> vagrant up
+> vagrant ssh
+$ cd arrakis/arrakis-hubot
+$ npm test
+```
