@@ -44,5 +44,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update -qq
     sudo apt-get install -y git build-essential nodejs nodejs-legacy npm coffeescript redis-server libgd2-xpm-dev libicu-dev
+    cd arrakis/arrakis-hubot
+    npm install
   SHELL
 end
