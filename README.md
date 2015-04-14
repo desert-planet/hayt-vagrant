@@ -4,7 +4,7 @@ To aid in the development of Hayt, our robotic soul
 ### Personality
 This tool will provide a foundation for the soul to exist.
 
-It breaths life and tests is faith.
+It will breathe life, and will tests its unwavering faith.
 
 Contribution's will only be acceptable through pull requests.
 
