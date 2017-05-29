@@ -48,7 +48,7 @@ Vagrant.configure(2) do |config|
       echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> ~/.profile
     }
 
-    . "$NVM_DIR/nvm.sh"
+    . "$HOME/nvm.sh"
     # TODO(sshirokov): Read this from package.json
     nvm install 0.10
     npm install -g avn avn-nvm avn-n
