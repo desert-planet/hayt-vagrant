@@ -27,7 +27,9 @@ When you're ready to test:
 ```
 > vagrant up
 > vagrant ssh
-$ cd arrakis/hayt
+$ cd hayt
+$ npm install
+$ npm test
 $ bin/hubot
 ```
 Test your feature.
