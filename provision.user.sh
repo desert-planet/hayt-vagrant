@@ -17,3 +17,7 @@ npm install -g avn avn-nvm avn-n
 { grep avn ~/.profile; } || {
   echo '[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"' >> .profile
 }
+
+{ grep node_modules/.bin ~/.profile; } || {
+  echo 'export PATH="./node_modules/.bin:$PATH"' >> .profile
+}
