@@ -21,6 +21,9 @@ The collective mind will guide Hayt.
 ```
 This will clone the `hayt` repo locally, make your changes here with your favorite editor.
 When you're ready to test:
+
+# TODO(sshirokov): Note that vagrant needs to come up as admin for symlinks to work
+
 ```
 > vagrant up
 > vagrant ssh
