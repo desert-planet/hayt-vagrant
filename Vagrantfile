@@ -25,6 +25,7 @@ Vagrant.configure(2) do |config|
   # So far hayt-vagrant/ is mapped to /vagrant. That's fine.
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "./", "/home/vagrant/arrakis"
+  config.vm.synced_folder "./hayt", "/home/vagrant/hayt", create: true
 
   # We're running this thing headless. No need for a gui currently.
   config.vm.provider :virtualbox do |vb|
@@ -32,9 +33,12 @@ Vagrant.configure(2) do |config|
   end
 
   # Just going to roll shell.
-  config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update -qq
-    sudo apt-get install -y git build-essential nodejs nodejs-legacy npm coffeescript redis-server libgd2-xpm-dev libicu-dev
-    git clone https://github.com/desert-planet/hayt /vagrant/hayt
+  config.vm.provision "shell", privileged: true, inline: <<-SHELL
+    apt-get update -qq
+    apt-get install -y git build-essential nodejs nodejs-legacy npm coffeescript redis-server libgd2-xpm-dev libicu-dev
+  SHELL
+
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    git clone https://github.com/desert-planet/hayt /home/vagrant/hayt
   SHELL
 end
