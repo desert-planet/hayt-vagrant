@@ -14,23 +14,17 @@ The collective mind will guide Hayt.
 - [Vagrant](https://www.vagrantup.com/downloads.html)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-### Goals
-- [x] Support Hubot execution.
-- [ ] Support mocha test execution.
-
 ### Workflow
 ```
-> git clone https://github.com/desert-planet/vagrant-hubot.git
-# If on windows you should set autocrlf to false.
-> git config --global core.autocrlf false
+> git clone https://github.com/desert-planet/hayt-vagrant
 > vagrant status
 ```
-This will clone the `arrakis-hubot` repo locally, make your changes here with your favorite editor.
+This will clone the `hayt` repo locally, make your changes here with your favorite editor.
 When you're ready to test:
 ```
 > vagrant up
 > vagrant ssh
-$ cd arrakis/arrakis-hubot
+$ cd arrakis/hayt
 $ bin/hubot
 ```
 Test your feature.
