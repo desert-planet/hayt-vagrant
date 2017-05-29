@@ -1,2 +1,5 @@
 .vagrant/*
 *.log
+
+# The local checkout folder should be ignored
+hayt
