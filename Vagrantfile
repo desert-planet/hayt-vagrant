@@ -1,19 +1,19 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-#clone repos localy
-current_dir = File.dirname(__FILE__)
-
-repos = {
-  'arrakis-hubot' => 'https://github.com/desert-planet/arrakis-hubot.git'
-}
-
-repos.each_pair do |dir, repo|
-  unless File.exists?("#{current_dir}/#{dir}")
-    puts "Cloning #{repo} into #{current_dir}/#{dir}"
-    system("git clone #{repo} #{current_dir}/#{dir}")
-  end
-end
+# TODO(sshirokov): Do this from within the VM, it's easier to git there.
+# #clone repos localy
+# current_dir = File.dirname(__FILE__)
+#
+# repos = {
+#   'hayt' => 'https://github.com/desert-planet/hayt'
+# }
+# repos.each_pair do |dir, repo|
+#   unless File.exists?("#{current_dir}/#{dir}")
+#     puts "Cloning #{repo} into #{current_dir}/#{dir}"
+#     system("git clone #{repo} #{current_dir}/#{dir}")
+#   end
+# end
 
 Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
