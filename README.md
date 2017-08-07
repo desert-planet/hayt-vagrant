@@ -30,6 +30,6 @@ When you're ready to test:
 $ cd hayt
 $ npm install
 $ npm test
-$ bin/hubot
+$ DEBUG=true bin/hubot -l .
 ```
 Test your feature.
