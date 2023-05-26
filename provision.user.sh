@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 [ -d ~/.nvm ] || git clone -b v0.33.2 https://github.com/creationix/nvm.git ~/.nvm
-[ -d /home/vagrant/hayt ] || git clone https://github.com/desert-planet/hayt /home/vagrant/hayt
+[ -d /home/vagrant/hayt/.git ] || git clone https://github.com/desert-planet/hayt /home/vagrant/hayt
 [ -d ~/hayt ] || ln -s /home/vagrant/hayt ~/hayt
 
 { grep nvm ~/.profile; } || {
