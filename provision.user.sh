@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-[ -d ~/.nvm ] || git clone -b v0.33.2 https://github.com/creationix/nvm.git ~/.nvm
+[ -d ~/.nvm ] || curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 [ -d /home/vagrant/hayt/.git ] || git clone https://github.com/desert-planet/hayt /home/vagrant/hayt
 [ -d ~/hayt ] || ln -s /home/vagrant/hayt ~/hayt
 
