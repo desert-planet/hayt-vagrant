@@ -11,7 +11,7 @@ set -e
 
 . "$HOME/.nvm/nvm.sh"
 # TODO(sshirokov): Read this from package.json
-nvm install 0.10
+nvm install 10
 npm install -g avn avn-nvm avn-n
 
 { grep avn ~/.profile; } || {
